@@ -1,3 +1,6 @@
+
+// promisse / callback
+
 require('dotenv').config()
 const axios = require('axios')
 
@@ -18,9 +21,6 @@ const getCurrentWeather = (lat, lon) => {
         .then(result => {
             console.log(`\nTemperature is ${result.data.main.temp} ºc\n`)
             currentWeather()
-        })
-        .catch(error => {
-            console.log(error.message)
         })
 }
 
